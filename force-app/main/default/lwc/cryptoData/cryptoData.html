@@ -1,0 +1,26 @@
+<template>
+    <lightning-card  title="Information" if:true={renderComponent}>
+        <div class="slds-p-horizontal_small">
+                <template for:each={cryptoData} for:item="cd">
+                    <div key={cd.id}>
+                        <p>Name: <strong>{cd.name}</strong></p>
+                        <p>Current Price: ${cd.price}</p>
+                        <p>Current Prince In Btc: {cd.price_btc}</p>
+                        <p>Market Cap: ${cd.market_cap}</p>
+                        <p>Percentage change in 24h: {cd.percent_change_24h}%</p>
+                        <p>Percentage change in 7d: {cd.percent_change_7d}%</p>
+                        <p>Percentage change in 30d: {cd.percent_change_30d}%</p>
+                        <p>Volume in USD for 24 hours: {cd.volume_24h}</p>
+                        <p>Max Supply: {cd.max_supply}</p>
+                        <p>Daily Open: ${cd.open}</p>
+                        <p>Daily High: ${cd.high}</p>
+                        <p>Daily Low: ${cd.low}</p>
+                        <p>Daily Close: ${cd.close}</p>
+                        <p>Daily Change in Percent: {cd.percent_change_24h}%</p>
+                    </div>
+                </template>
+        </div>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+    
+</template>
