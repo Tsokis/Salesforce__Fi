@@ -27,5 +27,15 @@ public with sharing class CryptoCtrl {
             return null;
         }
     }
+
+    @AuraEnabled
+    public static List<Crypto_Analysis__c> getRecords(){
+        List<Crypto_Analysis__c> recData= [select id,Crypto_Name_Form__c,Price_In_Form__c,Price_Out_Form__c from Crypto_Analysis__c];
+        if(recData.size()!=0){
+            return recData;
+        }else {
+            return null;
+        }
+    }
     
 }
