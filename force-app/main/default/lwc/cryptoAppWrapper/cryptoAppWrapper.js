@@ -6,8 +6,6 @@ export default class CryptoAppWrapper extends LightningElement {
     cryptoData = [];
     renderCryptoData = false;
     searchHandler(e){
-        console.log(e.detail);
-        console.log(e.detail.length);
         if(e.detail.length >=3){
             searchCrypto({userSelection:'assets',userSymbol:e.detail})
             .then(res => {
