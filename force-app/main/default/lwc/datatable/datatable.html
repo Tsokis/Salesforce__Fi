@@ -1,0 +1,15 @@
+<template>
+    <div>
+       <h1>Manual Asset Tracker</h1>
+    </div>
+   
+    <lightning-datatable key-field="Id" 
+                                 data={data} 
+                                 columns={columns} 
+                                 onsave={handleSave}
+                                 draft-values={saveDraftValues} 
+                                 hide-checkbox-column 
+                                 show-row-number-column>
+            </lightning-datatable>
+            
+</template>
